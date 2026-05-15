@@ -1,0 +1,19 @@
+# Python
+backend/__pycache__/
+backend/db.sqlite3
+backend/*.pyc
+backend/*.pyo
+backend/.env
+backend/.venv
+backend/venv/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Legacy Eleventy artifacts
+_site/
+
+# IDE
+.DS_Store
+npm-debug.log*
