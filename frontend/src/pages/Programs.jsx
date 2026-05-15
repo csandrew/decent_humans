@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Programs() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-16">
-      <h1 className="text-3xl font-bold tracking-tight text-deep-brown sm:text-4xl">Our Programs</h1>
+      <h1 className="text-3xl flex justify-center font-bold tracking-tight text-deep-brown sm:text-4xl">Our Programs</h1>
       <p className="mt-4 max-w-2xl text-base leading-8 text-brown/80">
         The Decent Humans Growth Journey helps children build spiritual confidence, emotional resilience, and healthy friendships every Saturday.
       </p>

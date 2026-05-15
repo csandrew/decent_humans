@@ -40,8 +40,8 @@ function Blog() {
       {/* Header with blog link */}
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-deep-brown sm:text-4xl">
-            Real Stories, Real Change
+          <h1 className="text-3xl flex justify-center font-bold tracking-tight text-deep-brown sm:text-4xl">
+            Real Testimonies, Real Change
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-8 text-brown/80">
             Hear from parents, mentors, and children whose lives have been transformed 

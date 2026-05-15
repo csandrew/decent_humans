@@ -1,69 +1,138 @@
+
+import { Link } from 'react-router-dom';
+
 function About() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-16">
-      <h1 className="text-3xl font-bold tracking-tight text-deep-brown sm:text-4xl">About Us</h1>
 
+      {/* TITLE */}
+      <h1 className="text-3xl flex justify-center font-bold tracking-tight text-deep-brown sm:text-4xl">
+        About Us
+      </h1>
+
+      {/* QUOTE */}
       <div className="mt-10 rounded-sm border border-brown/10 bg-gray-200 p-10 shadow-soft">
         <blockquote className="text-xl font-semibold text-deep-brown">
-          "Train up a child in the way he should go, and when he is old he will not depart from it." — Proverbs 22:6
+          "Train up a child in the way he should go, and when he is old he will not depart from it." - Proverbs 22:6
         </blockquote>
       </div>
 
-      <div className="mt-14 space-y-6 text-brown/80">
-        <div>
-          <h2 className="text-2xl font-semibold text-deep-brown">Our Story</h2>
-          <p className="mt-3 leading-8">
-            Decent Humans began in 2022 when a group of parents, teachers, and church leaders saw a gap in how children were being supported in Nairobi. Children were struggling with anxiety, identity questions, and spiritual disconnection, but there was no safe, affordable place that addressed all of these needs together.
-          </p>
-          <p className="mt-3 leading-8">
-            We started with 12 children in a church hall. Today, we have grown to serve children across multiple counties, helping them learn, pray, play, and grow together.
-          </p>
+      <div className="mt-14 space-y-24 text-brown/80">
+
+        {/* ===================== */}
+        {/* OUR STORY */}
+        {/* ===================== */}
+        <div className="flex flex-col md:flex-row items-center gap-10">
+
+          <div className="md:w-1/2">
+            <img
+              src="/images/sasha-matveeva.jpg"
+              alt="Our Story"
+              className="rounded-sm shadow-soft w-full object-cover"
+            />
+          </div>
+
+          <div className="md:w-1/2">
+            <h2 className="text-2xl font-semibold text-deep-brown">
+              Our Story
+            </h2>
+
+            <p className="mt-3 leading-8">
+              Decent Humans began in 2022 when parents, teachers, and church
+              leaders saw a gap in how children were being supported in Nairobi.
+              Children were struggling with anxiety, identity questions, and
+              spiritual disconnection.
+            </p>
+
+            <p className="mt-3 leading-8">
+              We started with 12 children in a church hall and have now grown
+              across multiple counties, helping children learn, pray, play,
+              and grow together.
+            </p>
+          </div>
         </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold text-deep-brown">Our Values</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-3">
-            <div className="rounded-[32px] border border-brown/10 bg-white p-8 text-center shadow-soft">
-              <div className="text-4xl">🙏</div>
-              <h3 className="mt-4 text-xl font-semibold text-deep-brown">Faith First</h3>
-              <p className="mt-3 text-brown/80">Everything we do is rooted in scripture and the love of Christ.</p>
-            </div>
-            <div className="rounded-[32px] border border-brown/10 bg-white p-8 text-center shadow-soft">
-              <div className="text-4xl">❤️</div>
-              <h3 className="mt-4 text-xl font-semibold text-deep-brown">Whole Child</h3>
-              <p className="mt-3 text-brown/80">We care about mental, emotional, spiritual, and social growth — not just academics.</p>
-            </div>
-            <div className="rounded-[32px] border border-brown/10 bg-white p-8 text-center shadow-soft">
-              <div className="text-4xl">🤝</div>
-              <h3 className="mt-4 text-xl font-semibold text-deep-brown">Safe & Loving</h3>
-              <p className="mt-3 text-brown/80">Every child deserves to feel seen, heard, and protected.</p>
+        {/* ===================== */}
+        {/* OUR VALUES */}
+        {/* ===================== */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-10">
+
+          <div className="md:w-1/2">
+            <img
+              src="/images/lei-hwang-2.jpg"
+              alt="Our Values"
+              className="rounded-sm shadow-soft w-full object-cover"
+            />
+          </div>
+
+          <div className="md:w-1/2">
+            <h2 className="text-2xl font-semibold text-deep-brown">
+              Our Values
+            </h2>
+
+            <div className="mt-6 space-y-4">
+              <p>Faith First - Rooted in scripture and Christ’s love</p>
+              <p>Whole Child - Emotional, mental, spiritual growth</p>
+              <p>Safe & Loving - Every child deserves protection</p>
             </div>
           </div>
         </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold text-deep-brown">Our Team</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-3">
-            <div className="rounded-[32px] border border-brown/10 bg-white p-8 text-center shadow-soft">
-              <div className="text-5xl">👩</div>
-              <h3 className="mt-4 text-xl font-semibold text-deep-brown">Grace Mwangi</h3>
-              <p className="mt-2 text-brown/80">Founder & Director</p>
-              <p className="text-brown/80">15 years children's ministry</p>
+        {/* ===================== */}
+        {/* OUR TEAM */}
+        {/* ===================== */}
+        <div className="flex flex-col items-center gap-10">
+
+          <div className="w-full text-center">
+            <h2 className="text-2xl font-semibold text-deep-brown">
+              Our Team
+            </h2>
+          </div>
+
+          <div className="w-full mt-6 grid gap-8 md:grid-cols-3">
+
+            {/* CARD 1 */}
+            <div className="rounded-sm border border-brown/10 bg-white p-8 shadow-soft text-center hover:shadow-lg transition">
+              <img
+                src="/images/lei-hwang.jpg"
+                alt="Lei Hwang"
+                className="mx-auto h-24 w-24 rounded-full object-cover"
+              />
+              <h3 className="mt-5 text-xl font-semibold text-deep-brown">
+                Lei Hwang
+              </h3>
+              <p className="text-brown/70">Founder & Director</p>
             </div>
-            <div className="rounded-[32px] border border-brown/10 bg-white p-8 text-center shadow-soft">
-              <div className="text-5xl">👨</div>
-              <h3 className="mt-4 text-xl font-semibold text-deep-brown">Peter Omondi</h3>
-              <p className="mt-2 text-brown/80">Program Coordinator</p>
-              <p className="text-brown/80">Child psychologist</p>
+
+            {/* CARD 2 */}
+            <div className="rounded-sm border border-brown/10 bg-white p-8 shadow-soft text-center hover:shadow-lg transition">
+              <img
+                src="/images/john-zhou.jpg"
+                alt="John Zhou"
+                className="mx-auto h-24 w-24 rounded-full object-cover"
+              />
+              <h3 className="mt-5 text-xl font-semibold text-deep-brown">
+                John Zhou
+              </h3>
+              <p className="text-brown/70">Program Coordinator</p>
             </div>
-            <div className="rounded-[32px] border border-brown/10 bg-white p-8 text-center shadow-soft">
-              <div className="text-5xl">👩</div>
-              <h3 className="mt-4 text-xl font-semibold text-deep-brown">Sarah Kipchoge</h3>
-              <p className="mt-2 text-brown/80">Mentorship Lead</p>
-              <p className="text-brown/80">20+ mentors trained</p>
+
+            {/* CARD 3 */}
+            <div className="rounded-sm border border-brown/10 bg-white p-8 shadow-soft text-center hover:shadow-lg transition">
+              <img
+                src="/images/devin-avery.jpg"
+                alt="Devin Avery"
+                className="mx-auto h-24 w-24 rounded-full object-cover"
+              />
+              <h3 className="mt-5 text-xl font-semibold text-deep-brown">
+                Devin Avery
+              </h3>
+              <p className="text-brown/70">Mentorship Lead</p>
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );

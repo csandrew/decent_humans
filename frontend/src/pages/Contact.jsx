@@ -34,7 +34,7 @@ function Contact() {
 
   return (
     <section className="mx-auto max-w-4xl px-6 py-16">
-      <h1 className="text-3xl font-bold tracking-tight text-deep-brown sm:text-4xl">Contact Us</h1>
+      <h1 className="text-3xl flex justify-center font-bold tracking-tight text-deep-brown sm:text-4xl">Contact Us</h1>
       <p className="mt-4 max-w-2xl text-base leading-8 text-brown/80">
         Share your prayer request, testimony, or question. We pray over every message within 48 hours.
       </p>
