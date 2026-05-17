@@ -8,7 +8,7 @@ function Involve() {
 
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         <div className="rounded-[32px] border border-brown/10 bg-white p-8 shadow-soft">
-          <h3 className="text-xl font-semibold">🙋 Volunteer as a Mentor</h3>
+          <h3 className="text-xl font-semibold"> Volunteer as a Mentor</h3>
           <p className="mt-4 text-brown/80">Lead small groups, support emotional growth, and build healthy friendships with children ages 6–14.</p>
           <a
             href="https://wa.me/254700000000?text=I'd%20like%20to%20volunteer%20as%20a%20mentor"
@@ -19,7 +19,7 @@ function Involve() {
         </div>
 
         <div className="rounded-[32px] border border-brown/10 bg-white p-8 shadow-soft">
-          <h3 className="text-xl font-semibold">🤝 Partner as a Church or School</h3>
+          <h3 className="text-xl font-semibold"> Partner as a Church or School</h3>
           <p className="mt-4 text-brown/80">Bring Decent Humans to your community through venue support, referral partnerships, or shared events.</p>
           <a
             href="https://wa.me/254700000000?text=I'm%20interested%20in%20partnering%20with%20Decent%20Humans"
@@ -30,7 +30,7 @@ function Involve() {
         </div>
 
         <div className="rounded-[32px] border border-brown/10 bg-white p-8 shadow-soft">
-          <h3 className="text-xl font-semibold">💰 Support with Giving</h3>
+          <h3 className="text-xl font-semibold"> Support with Giving</h3>
           <p className="mt-4 text-brown/80">Help us reach more children with materials, snacks, and mentor training.</p>
           <div className="mt-6 rounded-3xl border border-brown/20 bg-slate-50 p-5 text-left text-sm text-brown shadow-sm">
             <p><strong>Paybill:</strong> 123456</p>

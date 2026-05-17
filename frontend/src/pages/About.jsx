@@ -19,9 +19,9 @@ function About() {
 
       <div className="mt-14 space-y-24 text-brown/80">
 
-        {/* ===================== */}
+
         {/* OUR STORY */}
-        {/* ===================== */}
+
         <div className="flex flex-col md:flex-row items-center gap-10">
 
           <div className="md:w-1/2">
@@ -52,9 +52,9 @@ function About() {
           </div>
         </div>
 
-        {/* ===================== */}
+
         {/* OUR VALUES */}
-        {/* ===================== */}
+
         <div className="flex flex-col md:flex-row-reverse items-center gap-10">
 
           <div className="md:w-1/2">
@@ -78,9 +78,9 @@ function About() {
           </div>
         </div>
 
-        {/* ===================== */}
+
         {/* OUR TEAM */}
-        {/* ===================== */}
+
         <div className="flex flex-col items-center gap-10">
 
           <div className="w-full text-center">
