@@ -1,0 +1,6 @@
+# public/robots.txt
+User-agent: *
+Allow: /
+Sitemap: https://decenthumans.org/sitemap.xml
+Disallow: /admin/
+Disallow: /private/

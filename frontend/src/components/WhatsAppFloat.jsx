@@ -1,33 +1,20 @@
+import { FaWhatsapp } from 'react-icons/fa';
 import { site } from '../data/site';
+
+// In WhatsAppFloat.jsx and other components
+const whatsappBase = import.meta.env.VITE_WHATSAPP_BASE || site.whatsappBase
 
 function WhatsAppFloat() {
   return (
     <a
       href={`${site.whatsappBase}?text=Hi%20Decent%20Humans`}
-      className="fixed right-5 bottom-5 z-50 inline-flex h-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group overflow-hidden"
+      className="fixed right-5 bottom-5 z-50 inline-flex h-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-medium transition-all duration-300 hover:shadow-hover group overflow-hidden"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
     >
       <div className="flex items-center justify-center w-14 h-14 shrink-0">
-        <svg 
-          width="28" 
-          height="28" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path 
-            fillRule="evenodd" 
-            clipRule="evenodd" 
-            d="M12 2C6.48 2 2 6.48 2 12C2 14.25 2.76 16.33 4.06 18L2.09 21.09C1.96 21.31 2 21.6 2.18 21.78C2.36 21.96 2.65 22 2.87 21.87L6 19.94C7.67 21.04 9.67 21.72 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C9.68 20 7.53 19.09 5.91 17.56L5.47 17.15L3.73 18.27L4.85 16.53L4.44 16.09C2.91 14.47 2 12.32 2 10C2 5.04 6.04 1 11 1C15.96 1 20 5.04 20 10C20 14.96 15.96 20 12 20Z" 
-            fill="white"
-          />
-          <path 
-            d="M16.5 12.25C16.25 12.12 15.28 11.65 14.05 11.12C13.82 11.01 13.58 11 13.35 11.09C13.15 11.17 12.99 11.33 12.92 11.53C12.84 11.75 12.74 12.02 12.66 12.23C12.58 12.44 12.46 12.46 12.26 12.36C11.78 12.12 10.98 11.7 10.47 10.92C10.29 10.66 10.19 10.46 10.11 10.33C10.03 10.2 10.06 10.11 10.11 10.02C10.17 9.93 10.26 9.82 10.31 9.73C10.36 9.64 10.39 9.56 10.45 9.44C10.51 9.32 10.48 9.21 10.44 9.12C10.4 9.03 10.3 8.84 10.23 8.69C10.16 8.54 10.02 8.21 9.94 8.05C9.86 7.89 9.77 7.89 9.7 7.88C9.64 7.87 9.57 7.87 9.5 7.87C9.39 7.87 9.22 7.91 9.07 8.07C8.92 8.23 8.5 8.62 8.5 9.25C8.5 9.88 8.94 10.49 9.02 10.61C9.1 10.73 10.07 12.27 11.6 12.9C12.27 13.18 12.94 13.35 13.5 13.44C14.16 13.54 14.75 13.45 15.22 13.26C15.75 13.04 16.21 12.63 16.33 12.19C16.45 11.75 16.39 11.4 16.31 11.27C16.23 11.14 16.04 11.06 15.9 11.03C15.76 11 15.57 10.99 15.45 10.98C15.33 10.97 15.2 11.01 15.07 11.05C14.94 11.09 14.78 11.17 14.64 11.24C14.5 11.31 14.37 11.33 14.29 11.27C14.21 11.21 13.98 10.95 13.8 10.74C13.62 10.53 13.45 10.44 13.32 10.4C13.19 10.36 13.07 10.39 12.98 10.46C12.89 10.53 12.71 10.7 12.64 10.78C12.57 10.86 12.5 10.91 12.43 10.99C12.36 11.07 12.25 11.08 12.15 11.04C12.05 11 11.71 10.88 11.32 10.54C10.93 10.2 10.71 9.82 10.64 9.69C10.57 9.56 10.66 9.47 10.72 9.41C10.78 9.35 10.84 9.29 10.87 9.23C10.9 9.17 10.93 9.07 10.89 8.97C10.85 8.87 10.67 8.48 10.58 8.29C10.49 8.1 10.4 8.13 10.33 8.12H10C9.87 8.12 9.67 8.17 9.49 8.36C9.31 8.55 8.91 8.94 8.91 9.73C8.91 10.52 9.45 11.31 9.53 11.43C9.61 11.55 10.57 13.06 12.16 13.77C13.75 14.48 14.32 14.34 14.76 14.23C15.2 14.12 16.2 13.66 16.41 13.08C16.62 12.5 16.62 11.99 16.55 11.87C16.48 11.75 16.6 11.66 16.6 11.66C16.6 11.66 16.68 11.59 16.7 11.5C16.72 11.41 16.68 11.3 16.64 11.23C16.6 11.16 16.5 11.02 16.5 11.02C16.5 11.02 16.48 11.04 16.5 11.02Z" 
-            fill="white"
-          />
-        </svg>
+        <FaWhatsapp size={28} />
       </div>
       
       <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 whitespace-nowrap font-bold pr-4">

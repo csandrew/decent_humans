@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply min-h-screen bg-cream text-brown antialiased;
+    @apply min-h-screen bg-background text-secondary antialiased;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
@@ -35,6 +35,14 @@
   .shadow-soft {
     box-shadow: 0 2px 18px rgba(0, 0, 0, 0.05);
   }
+  
+  .shadow-medium {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+  
+  .shadow-hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
 }
 
 label {
@@ -48,9 +56,18 @@ select,
 textarea {
   width: 100%;
   padding: 0.95rem 1rem;
-  border-radius: var(--radius-md);
-  border: 1px solid #e8ddd0;
-  background: var(--white);
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #84a98c;
+  box-shadow: 0 0 0 3px rgba(132, 169, 140, 0.1);
 }
 
 textarea {
@@ -58,29 +75,31 @@ textarea {
   resize: vertical;
 }
 
-.success-message,
-.error-message,
-.note {
+.success-message {
   margin-top: 1rem;
   padding: 1rem 1.25rem;
-  border-radius: var(--radius-md);
-}
-
-.success-message {
+  border-radius: 0.5rem;
   background: #dff5e5;
-  color: #2f5423;
+  color: #10b981;
 }
 
 .error-message {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
   background: #fde3e3;
-  color: #7a1b1b;
+  color: #ef4444;
 }
 
 .note {
-  background: var(--gray);
-  color: var(--brown);
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #f3f4f6;
+  color: #354f52;
 }
 
+/* Responsive utilities */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -91,12 +110,24 @@ textarea {
     width: 100%;
     justify-content: flex-start;
   }
+}
 
-  .hero {
-    padding: 3.5rem 0;
-  }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
-  .container {
-    padding: 1.5rem 0;
-  }
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #84a98c;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52796f;
 }
