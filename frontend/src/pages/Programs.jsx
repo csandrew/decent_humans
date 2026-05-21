@@ -45,9 +45,9 @@ function Programs() {
               Our Programs
             </h2>
             <p className="text-secondary text-lg flex items-center justify-center gap-2">
-              <FaCalendarAlt className="text-accent" size={16} />
+            
               Every Saturday | Ages 6-14 | Nairobi
-              <FaMapMarkerAlt className="text-accent ml-2" size={16} />
+          
             </p>
           </div>
 
@@ -102,14 +102,14 @@ function Programs() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="bg-primary py-16">
+      <section className="bg-accent py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center bg-white rounded-2xl shadow-medium p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
               Ready to Start the Journey?
             </h3>
             <p className="text-secondary mb-6 flex items-center justify-center gap-3">
-              <FaCalendarAlt className="text-accent" size={16} />
+              
               Saturdays, 9am - 12pm | Nairobi CBD
             </p>
             <a
@@ -117,8 +117,8 @@ function Programs() {
               className="inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-whatsapp/90 text-white font-semibold py-3 px-8 rounded-lg transition-all shadow-soft hover:shadow-medium"
             >
               <FaWhatsapp size={18} />
-              Register via WhatsApp
-              <FaArrowRight size={14} />
+              Enquire via WhatsApp
+              
             </a>
           </div>
         </div>

@@ -13,6 +13,7 @@ export default {
         'accent': '#84a98c',
         'background': '#f8f9fa',
         'white': '#ffffff',
+        'light-accent': '#cad2c5',
         
         // OLD COLOR NAMES (for compatibility)
         'deep-brown': '#2f3e46',

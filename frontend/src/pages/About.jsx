@@ -91,7 +91,7 @@ function About() {
 
           <div className="w-full mt-6 grid gap-8 md:grid-cols-3">
             {/* CARD 1 */}
-            <div className="rounded-md border border-brown/10 bg-white p-8 shadow-soft text-center hover:shadow-lg transition">
+            <div className="rounded-md border border-brown/10 bg-light-accent p-8 shadow-soft text-center hover:shadow-lg transition">
               <img
                 src="/images/lei-hwang.jpg"
                 alt="Lei Hwang"
@@ -107,7 +107,7 @@ function About() {
             </div>
 
             {/* CARD 2 */}
-            <div className="rounded-md border border-brown/10 bg-white p-8 shadow-soft text-center hover:shadow-lg transition">
+            <div className="rounded-md border border-brown/10 bg-light-accent p-8 shadow-soft text-center hover:shadow-lg transition">
               <img
                 src="/images/john-zhou.jpg"
                 alt="John Zhou"
@@ -123,7 +123,7 @@ function About() {
             </div>
 
             {/* CARD 3 */}
-            <div className="rounded-md border border-brown/10 bg-white p-8 shadow-soft text-center hover:shadow-lg transition">
+            <div className="rounded-md border border-brown/10 bg-light-accent p-8 shadow-soft text-center hover:shadow-lg transition">
               <img
                 src="/images/devin-avery.jpg"
                 alt="Devin Avery"
