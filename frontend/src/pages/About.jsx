@@ -7,7 +7,7 @@ function About() {
 
       {/* TITLE */}
       <h1 className="text-3xl flex justify-center items-center gap-3 font-bold tracking-tight text-primary sm:text-4xl">
-        <FaUsers className="text-accent" size={32} />
+    
         About Us
       </h1>
 
@@ -84,7 +84,7 @@ function About() {
           </div>
           <div className="md:w-1/2">
             <h2 className="text-2xl font-semibold text-primary flex items-center gap-2">
-              <FaSmile className="text-accent" size={24} />
+              
               Our Story
             </h2>
             <p className="mt-3 leading-8">
@@ -112,7 +112,7 @@ function About() {
           </div>
           <div className="md:w-1/2">
             <h2 className="text-2xl font-semibold text-primary flex items-center gap-2">
-              <FaHeart className="text-accent" size={24} />
+          
               Our Values
             </h2>
             <div className="mt-6 space-y-4">
