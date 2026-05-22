@@ -46,7 +46,7 @@ function Contact() {
         
             Let's Connect
           </h1>
-          <p className="text-xl text-brown/80 max-w-2xl mx-auto">
+          <p className="text-xl text-secondary/80 max-w-2xl mx-auto">
             Reach out and we'll help you be part of the movement journey.
             Share your prayer request, testimony, or question.
           </p>
@@ -62,7 +62,7 @@ function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-deep-brown mb-1">Call Us</h3>
-                <a href="tel:+254724436800" className="text-brown/70 hover:text-blue-600 transition-colors">
+                <a href="tel:+254724436800" className="text-secondary/70 hover:text-blue-600 transition-colors">
                   +254 724 436800
                 </a>
               </div>
@@ -76,7 +76,7 @@ function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-deep-brown mb-1">Email</h3>
-                <a href="mailto:tribe@kinetiq-fit.com" className="text-brown/70 hover:text-purple-600 transition-colors">
+                <a href="mailto:tribe@kinetiq-fit.com" className="text-secondary/70 hover:text-purple-600 transition-colors">
                   tribe@kinetiq-fit.com
                 </a>
               </div>
@@ -90,7 +90,7 @@ function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-deep-brown mb-1">Location</h3>
-                <p className="text-brown/70">
+                <p className="text-secondary/70">
                   View Park Towers, 17TH Floor,<br />
                   Monrovia Street Nairobi, Kenya.
                 </p>
@@ -103,8 +103,8 @@ function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="fullName" className="block text-sm font-semibold text-deep-brown mb-2">
-                  <FaUser className="inline mr-2 text-gold" size={14} />
-                  Your name <span className="font-normal text-brown/60">(optional)</span>
+                  <FaUser className="inline mr-2 text-accent" size={14} />
+                  Your name <span className="font-normal text-secondary/60">(optional)</span>
                 </label>
                 <input
                   type="text"
@@ -119,8 +119,8 @@ function Contact() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-deep-brown mb-2">
-                  <FaAt className="inline mr-2 text-gold" size={14} />
-                  Email address <span className="font-normal text-brown/60">(optional)</span>
+                  <FaAt className="inline mr-2 text-accent" size={14} />
+                  Email address <span className="font-normal text-secondary/60">(optional)</span>
                 </label>
                 <input
                   type="email"
@@ -135,7 +135,7 @@ function Contact() {
 
               <div>
                 <label htmlFor="programme" className="block text-sm font-semibold text-deep-brown mb-2">
-                  <FaGraduationCap className="inline mr-2 text-gold" size={14} />
+                  <FaGraduationCap className="inline mr-2 text-accent" size={14} />
                   Interested Programme
                 </label>
                 <select
@@ -157,7 +157,7 @@ function Contact() {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold text-deep-brown mb-2">
-                  <FaRegCommentDots className="inline mr-2 text-gold" size={14} />
+                  <FaRegCommentDots className="inline mr-2 text-accent" size={14} />
                   Your message <span className="text-rose-600">*</span>
                 </label>
                 <textarea
@@ -175,7 +175,7 @@ function Contact() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-gold px-8 py-3 text-base font-semibold text-deep-brown rounded-md shadow-soft transition hover:bg-[#b8922e] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-accent px-8 py-3 text-base font-semibold text-deep-brown rounded-md shadow-soft transition hover:bg-[#b8922e] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === "submitting" ? (
                   <>Sending...</>

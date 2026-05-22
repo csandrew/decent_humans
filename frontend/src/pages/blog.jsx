@@ -47,14 +47,14 @@ function Blog() {
             
             Real Stories, Real Change
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-brown/80">
+          <p className="mt-4 max-w-2xl text-base leading-8 text-secondary/80">
             Hear from parents, mentors, and children whose lives have been transformed 
             through the Decent Humans journey.
           </p>
         </div>
         <a 
           href="/blog"
-          className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold transition hover:text-[#b8922e] sm:mt-0"
+          className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent transition hover:text-[#b8922e] sm:mt-0"
         >
         
           Visit Our Blog
@@ -70,7 +70,7 @@ function Blog() {
             <div key={idx} className="group flex flex-col rounded-[32px] border border-brown/10 bg-white p-8 shadow-soft transition hover:shadow-md">
               <div className="flex items-start gap-3">
                 
-                <p className="text-brown/80">"{item.story}"</p>
+                <p className="text-secondary/80">"{item.story}"</p>
               </div>
               <p className="mt-6 font-semibold text-deep-brown">{item.author}</p>
               
@@ -80,7 +80,7 @@ function Blog() {
                   <div className="w-full border-t border-brown/10"></div>
                 </div>
                 <div className="relative flex justify-center text-xs">
-                  <span className="bg-white px-2 text-brown/40 flex items-center gap-1">
+                  <span className="bg-white px-2 text-secondary/40 flex items-center gap-1">
                     <FaBookOpen size={10} />
                     read the full story on our blog
                   </span>
@@ -90,11 +90,11 @@ function Blog() {
               {/* Featured blog post */}
               <a 
                 href={`/blog/${item.blogPost.slug}`}
-                className="mt-2 block rounded-xl bg-brown/5 p-4 transition hover:bg-brown/10"
+                className="mt-2 block rounded-xl bg-secondary/5 p-4 transition hover:bg-secondary/10"
               >
                 <h4 className="font-semibold text-deep-brown">{item.blogPost.title}</h4>
-                <p className="mt-1 text-sm text-brown/60">{item.blogPost.excerpt}</p>
-                <div className="mt-3 flex items-center gap-2 text-xs text-gold">
+                <p className="mt-1 text-sm text-secondary/60">{item.blogPost.excerpt}</p>
+                <div className="mt-3 flex items-center gap-2 text-xs text-accent">
                   <span>{item.blogPost.readTime}</span>
                   <span>•</span>
                   <span>Read more</span>
@@ -109,17 +109,17 @@ function Blog() {
       {/* Call to action with dual options */}
       <div className="mt-10 rounded-[32px] border border-brown/10 bg-white p-10 text-center shadow-soft">
         <h3 className="text-xl font-semibold text-deep-brown flex items-center justify-center gap-2">
-          <FaPenFancy className="text-gold" size={22} />
+          <FaPenFancy className="text-accent" size={22} />
           Want to share your story?
         </h3>
-        <p className="mt-3 text-brown/80">
+        <p className="mt-3 text-secondary/80">
           Your experience could inspire others and become a featured blog post.
         </p>
         
         <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-center">
           <a
             href="https://wa.me/254700000000?text=I'd%20like%20to%20share%20my%20story"
-            className="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-sm font-semibold text-deep-brown transition hover:bg-[#b8922e]"
+            className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-deep-brown transition hover:bg-[#b8922e]"
           >
             <FaWhatsapp size={16} />
             Share Your Story
@@ -128,7 +128,7 @@ function Blog() {
           
         </div>
         
-        <p className="mt-6 text-xs text-brown/40 flex items-center justify-center gap-1">
+        <p className="mt-6 text-xs text-secondary/40 flex items-center justify-center gap-1">
           <FaStar size={10} />
           Selected stories are featured in our blog series "Changed Lives"
           <FaStar size={10} />

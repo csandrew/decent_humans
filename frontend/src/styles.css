@@ -33,7 +33,7 @@
 
 @layer utilities {
   .shadow-soft {
-    box-shadow: 0 2px 18px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
   
   .shadow-medium {
@@ -45,6 +45,7 @@
   }
 }
 
+/* Form styles */
 label {
   display: block;
   margin-bottom: 0.5rem;
@@ -75,6 +76,7 @@ textarea {
   resize: vertical;
 }
 
+/* Message styles */
 .success-message {
   margin-top: 1rem;
   padding: 1rem 1.25rem;
@@ -99,20 +101,7 @@ textarea {
   color: #354f52;
 }
 
-/* Responsive utilities */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    width: 100%;
-    justify-content: flex-start;
-  }
-}
-
-/* Custom scrollbar */
+/* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
