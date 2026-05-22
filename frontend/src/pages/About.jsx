@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaQuoteLeft, FaHeart, FaShieldAlt, FaBible, FaSmile, FaUsers, FaUserTie, FaClipboardList, FaChalkboardTeacher } from 'react-icons/fa';
+import { FaQuoteLeft, FaHeart, FaShieldAlt, FaBible, FaSmile, FaUsers, FaUserTie, FaClipboardList, FaChalkboardTeacher, FaBullseye, FaEye, FaEnvelope } from 'react-icons/fa';
 
 function About() {
   return (
@@ -7,9 +7,61 @@ function About() {
 
       {/* TITLE */}
       <h1 className="text-3xl flex justify-center items-center gap-3 font-bold tracking-tight text-primary sm:text-4xl">
-        
+        <FaUsers className="text-accent" size={32} />
         About Us
       </h1>
+
+      {/* Mission & Vision Section */}
+      <div className="mt-10 bg-white rounded-2xl shadow-soft p-8">
+        <p className="text-center text-secondary mb-12 text-lg">
+          Decent Humans serves children and families in Nairobi, Kenya, providing a nurturing environment where young learners flourish with access to holistic education that develops healthy, happy, confident children.
+        </p>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-accent/10 rounded-xl p-6">
+            <h2 className="text-2xl font-bold text-primary mb-4 flex items-center gap-2">
+              <FaBullseye className="text-accent" size={24} />
+              Our Mission
+            </h2>
+            <p className="text-secondary leading-relaxed">
+              To provide a nurturing, safe, and stimulating environment where every child discovers their unique potential, grows spiritually, and develops a lifelong love for learning.
+            </p>
+          </div>
+          <div className="bg-accent/10 rounded-xl p-6">
+            <h2 className="text-2xl font-bold text-primary mb-4 flex items-center gap-2">
+              <FaEye className="text-accent" size={24} />
+              Our Vision
+            </h2>
+            <p className="text-secondary leading-relaxed">
+              To be a leading organization in Kenya, setting the standard for excellence in children's spiritual and emotional development.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Principal's Message */}
+      <div className="mt-10 bg-white rounded-2xl shadow-soft p-8">
+        <h2 className="text-2xl font-bold text-center text-primary mb-6 flex items-center justify-center gap-2">
+          <FaEnvelope className="text-accent" size={24} />
+          Founder's Message
+        </h2>
+        <div className="flex flex-col md:flex-row gap-6 items-start">
+          <img 
+            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+            alt="Founder" 
+            className="w-32 h-32 rounded-full object-cover mx-auto md:mx-0"
+          />
+          <div className="flex-1">
+            <p className="text-secondary italic text-lg leading-relaxed mb-4">
+              "At Decent Humans, we believe every child is unique and capable of amazing things. Our dedicated team works tirelessly to create an environment where faith is nurtured, kindness is practiced, and learning is joyful."
+            </p>
+            <p>
+              <strong className="text-primary">- Lei Hwang</strong>
+              <br />
+              <span className="text-secondary/70">Founder & Director</span>
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* QUOTE */}
       <div className="mt-10 rounded-md border border-secondary/10 bg-gray-200 p-10 shadow-soft">
@@ -32,7 +84,7 @@ function About() {
           </div>
           <div className="md:w-1/2">
             <h2 className="text-2xl font-semibold text-primary flex items-center gap-2">
-              
+              <FaSmile className="text-accent" size={24} />
               Our Story
             </h2>
             <p className="mt-3 leading-8">
@@ -60,7 +112,7 @@ function About() {
           </div>
           <div className="md:w-1/2">
             <h2 className="text-2xl font-semibold text-primary flex items-center gap-2">
-              
+              <FaHeart className="text-accent" size={24} />
               Our Values
             </h2>
             <div className="mt-6 space-y-4">
@@ -75,66 +127,6 @@ function About() {
               <p className="flex items-center gap-2">
                 <FaShieldAlt className="text-accent shrink-0" size={18} />
                 Safe & Loving - Every child deserves protection
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* OUR TEAM */}
-        <div className="flex flex-col items-center gap-10">
-          <div className="w-full text-center">
-            <h2 className="text-2xl font-semibold text-primary flex items-center justify-center gap-2">
-        
-              Our Team
-            </h2>
-          </div>
-
-          <div className="w-full mt-6 grid gap-8 md:grid-cols-3">
-            {/* CARD 1 - Founder */}
-            <div className="rounded-md border border-secondary/10 bg-white p-8 shadow-soft text-center hover:shadow-lg transition">
-              <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Lei Hwang - Founder"
-                className="mx-auto h-32 w-32 rounded-full object-cover"
-              />
-              <h3 className="mt-5 text-xl font-semibold text-primary">
-                Lei Hwang
-              </h3>
-              <p className="text-secondary/70 flex items-center justify-center gap-1">
-                <FaUserTie size={14} />
-                Founder & Director
-              </p>
-            </div>
-
-            {/* CARD 2 - Program Coordinator */}
-            <div className="rounded-md border border-secondary/10 bg-white p-8 shadow-soft text-center hover:shadow-lg transition">
-              <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="John Zhou - Program Coordinator"
-                className="mx-auto h-32 w-32 rounded-full object-cover"
-              />
-              <h3 className="mt-5 text-xl font-semibold text-primary">
-                John Zhou
-              </h3>
-              <p className="text-secondary/70 flex items-center justify-center gap-1">
-                <FaClipboardList size={14} />
-                Program Coordinator
-              </p>
-            </div>
-
-            {/* CARD 3 - Mentorship Lead */}
-            <div className="rounded-md border border-secondary/10 bg-white p-8 shadow-soft text-center hover:shadow-lg transition">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Devin Avery - Mentorship Lead"
-                className="mx-auto h-32 w-32 rounded-full object-cover"
-              />
-              <h3 className="mt-5 text-xl font-semibold text-primary">
-                Devin Avery
-              </h3>
-              <p className="text-secondary/70 flex items-center justify-center gap-1">
-                <FaChalkboardTeacher size={14} />
-                Mentorship Lead
               </p>
             </div>
           </div>

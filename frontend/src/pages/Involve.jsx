@@ -5,11 +5,7 @@ function Involve() {
     <section className="bg-background py-16">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center mb-12">
-          <div className="flex justify-center gap-3 mb-4">
-            <FaHeart className="text-accent" size={32} />
-            <FaUsers className="text-accent" size={32} />
-            <FaHandsHelping className="text-accent" size={32} />
-          </div>
+          
           <h1 className="text-3xl font-bold text-primary sm:text-4xl">
             Partner With Us
           </h1>
@@ -60,7 +56,7 @@ function Involve() {
             <p className="text-secondary mb-6">Help us reach more children with materials, snacks, and mentor training.</p>
             <div className="bg-gray-50 rounded-lg p-4 text-left">
               <p className="flex items-center gap-2 text-secondary mb-2">
-                <FaMoneyBillWave className="text-grow" size={16} />
+                
                 <strong>Paybill:</strong> 123456
               </p>
               <p className="flex items-center gap-2 text-secondary">
