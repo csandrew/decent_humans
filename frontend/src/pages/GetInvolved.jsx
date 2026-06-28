@@ -1,55 +1,46 @@
-import {
-  FaQuoteLeft, FaBookOpen, FaArrowRight, FaNewspaper, FaWhatsapp,
+import { useState } from 'react';
+import { 
+  FaQuoteLeft, FaBookOpen, FaArrowRight, FaNewspaper, FaWhatsapp, 
   FaPenFancy, FaStar, FaHeart, FaChild, FaGraduationCap, FaUsers,
   FaHandsHelping, FaChurch, FaDonate, FaMoneyBillWave,
-  FaSmile, FaShieldAlt, FaBible
+  FaSmile, FaShieldAlt, FaBible, FaChevronLeft, FaChevronRight
 } from 'react-icons/fa';
 
 function GetInvolved() {
-  // Testimonies/Stories data
-  const blogConnections = [
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  // Testimonials data
+  const testimonials = [
     {
-      story: "My daughter used to struggle with anxiety before school. After three months in the Saturday program, she prays every morning and walks into class with confidence. God is working through Decent Humans.",
-      author: "— Mary, mother of 9-year-old",
-      icon: FaHeart,
-      blogPost: {
-        title: "Understanding Childhood Anxiety Through Faith",
-        excerpt: "How prayer routines transformed one family's mornings",
-        slug: "childhood-anxiety-faith",
-        readTime: "5 min read"
-      }
+      content: "My daughter used to struggle with anxiety before school. After three months in the Saturday program, she prays every morning and walks into class with confidence. God is working through Decent Humans.",
+      name: "Mary",
+      childName: "9-year-old daughter",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face"
     },
     {
-      story: "As a volunteer mentor, I've seen children who couldn't look you in the eye now lead prayer sessions. The Growth Journey works because it's rooted in scripture AND practical care.",
-      author: "— James, Mentor for 2 years",
-      icon: FaUsers,
-      blogPost: {
-        title: "The Power of Mentorship: A Volunteer's Perspective",
-        excerpt: "Behind the scenes of our Saturday program",
-        slug: "power-of-mentorship",
-        readTime: "4 min read"
-      }
+      content: "As a volunteer mentor, I've seen children who couldn't look you in the eye now lead prayer sessions. The Growth Journey works because it's rooted in scripture AND practical care.",
+      name: "James",
+      childName: "Mentor for 2 years",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
     },
     {
-      story: "I learned that being angry doesn't make me bad. I just need to pause, pray, and then talk. Now I help my little sister when she's upset.",
-      author: "— Esther, age 11",
-      icon: FaChild,
-      blogPost: {
-        title: "Teaching Emotional Regulation to Kids",
-        excerpt: "Lessons from our Growth Journey curriculum",
-        slug: "emotional-regulation-kids",
-        readTime: "6 min read"
-      }
+      content: "I learned that being angry doesn't make me bad. I just need to pause, pray, and then talk. Now I help my little sister when she's upset.",
+      name: "Esther",
+      childName: "Age 11",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1518481852451-9410d1a4b5e6?w=200&h=200&fit=crop&crop=face"
     }
   ];
 
   return (
     <section className="bg-background py-16">
       <div className="mx-auto max-w-6xl px-6">
-
+        
         {/* Page Header */}
         <div className="text-center mb-12">
-           
+          
           <h1 className="text-4xl font-bold text-primary sm:text-5xl underline decoration-accent underline-offset-8">
             Get Involved
           </h1>
@@ -58,13 +49,96 @@ function GetInvolved() {
           </p>
         </div>
 
+        {/* Testimonials Section */}
+        <section className="py-12">
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 relative overflow-hidden">
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/10 to-transparent rounded-full"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-primary/10 to-transparent rounded-full"></div>
+
+              <div className="relative z-10">
+                <div className="flex justify-center mb-6">
+                  <div className="flex gap-1">
+                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                      <FaStar key={i} className="w-6 h-6 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <div className="absolute -top-2 -left-2 text-6xl text-secondary/20 font-serif">"</div>
+                  <p className="text-gray-700 text-lg md:text-xl text-center italic mb-8 px-4">
+                    "{testimonials[currentTestimonial].content}"
+                  </p>
+                  <div className="absolute -bottom-2 -right-2 text-6xl text-secondary/20 font-serif rotate-180">"</div>
+                </div>
+
+                <div className="flex items-center justify-center gap-4">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden bg-gradient-to-r from-secondary to-primary p-0.5">
+                    <div className="w-full h-full rounded-full overflow-hidden bg-white">
+                      <img
+                        src={testimonials[currentTestimonial].image}
+                        alt={testimonials[currentTestimonial].name}
+                        className="object-cover w-full h-full"
+                        onError={(e) => {
+                          const target = e.target;
+                          target.src = 'https://placehold.co/200x200/2f3e46/white?text=Parent';
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-primary text-lg">
+                      {testimonials[currentTestimonial].name}
+                    </h4>
+                    <p className="text-gray-500 text-sm">
+                      Parent of {testimonials[currentTestimonial].childName}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="flex justify-center gap-4 mt-8">
+              <button
+                onClick={() => setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
+                className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition-all hover:scale-110"
+                aria-label="Previous testimonial"
+              >
+                <FaChevronLeft className="w-5 h-5 text-primary" />
+              </button>
+              <div className="flex gap-2 items-center">
+                {testimonials.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentTestimonial(idx)}
+                    className={`h-2 rounded-full transition-all duration-300 ${idx === currentTestimonial ? 'bg-accent w-8' : 'bg-gray-300 w-2 hover:bg-accent/50'
+                      }`}
+                    aria-label={`Go to testimonial ${idx + 1}`}
+                  />
+                ))}
+              </div>
+              <button
+                onClick={() => setCurrentTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
+                className="p-3 rounded-full bg-white shadow-md hover:shadow-lg transition-all hover:scale-110"
+                aria-label="Next testimonial"
+              >
+                <FaChevronRight className="w-5 h-5 text-primary" />
+              </button>
+            </div>
+          </div>
+        </section>
+
         {/* Section 1: Ways to Get Involved */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-primary text-center mb-8 flex items-center justify-center gap-2">
-           
+            
             Ways to Get Involved
           </h2>
-
+          
           <div className="grid gap-6 md:grid-cols-3">
             {/* Volunteer Card */}
             <div className="bg-white rounded-xl shadow-soft hover:shadow-hover transition-all p-8 text-center border border-gray-100">
@@ -116,82 +190,6 @@ function GetInvolved() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Section 2: Stories/Testimonies */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-primary text-center mb-8 flex items-center justify-center gap-2">
-           
-            Real Stories, Real Change
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {blogConnections.map((item, idx) => {
-              const StoryIcon = item.icon;
-              return (
-                <div key={idx} className="group flex flex-col rounded-[32px] border border-secondary/10 bg-white p-8 shadow-soft transition hover:shadow-md">
-                  <div className="flex items-start gap-3">
-                    <StoryIcon className="text-accent shrink-0 mt-1" size={20} />
-                    <p className="text-secondary/80">"{item.story}"</p>
-                  </div>
-                  <p className="mt-6 font-semibold text-primary">{item.author}</p>
-
-                  {/* Blog connection divider */}
-                  <div className="relative my-6">
-                    <div className="absolute inset-0 flex items-center">
-                      <div className="w-full border-t border-secondary/10"></div>
-                    </div>
-                    <div className="relative flex justify-center text-xs">
-                      <span className="bg-white px-2 text-secondary/40 flex items-center gap-1">
-                        <FaBookOpen size={10} />
-                        read the full story
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Featured blog post */}
-                  <div className="mt-2 block rounded-xl bg-secondary/5 p-4 transition hover:bg-secondary/10">
-                    <h4 className="font-semibold text-primary">{item.blogPost.title}</h4>
-                    <p className="mt-1 text-sm text-secondary/60">{item.blogPost.excerpt}</p>
-                    <div className="mt-3 flex items-center gap-2 text-xs text-accent">
-                      <span>{item.blogPost.readTime}</span>
-                      <span>•</span>
-                      <span>Read more</span>
-                      <FaArrowRight size={10} />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Section 3: Share Your Story CTA */}
-        <div className="rounded-[32px] border border-secondary/10 bg-white p-10 text-center shadow-soft">
-          <h3 className="text-xl font-semibold text-primary flex items-center justify-center gap-2">
-            <FaPenFancy className="text-accent" size={22} />
-            Want to share your story?
-          </h3>
-          <p className="mt-3 text-secondary/80">
-            Your experience could inspire others and encourage more people to get involved.
-          </p>
-
-          <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <a
-              href="https://wa.me/254700000000?text=I'd%20like%20to%20share%20my%20story"
-              className="inline-flex items-center gap-2 rounded-md bg-accent hover:bg-accent/80 text-white px-6 py-3 text-sm font-semibold transition shadow-soft"
-            >
-              <FaWhatsapp size={16} />
-              Share Your Story
-              <FaArrowRight size={12} />
-            </a>
-          </div>
-
-          <p className="mt-6 text-xs text-secondary/40 flex items-center justify-center gap-1">
-            <FaStar size={10} />
-            Selected stories are featured in our "Changed Lives" series
-            <FaStar size={10} />
-          </p>
         </div>
 
       </div>

@@ -1,7 +1,7 @@
 import { 
   FaCompass, FaSeedling, FaUsers, FaCrown, FaWhatsapp, 
   FaArrowRight, FaCheckCircle, FaCalendarAlt, FaMapMarkerAlt,
-  FaShieldAlt, FaBible, FaSmile
+  FaShieldAlt, FaBible, FaSmile, FaHeart
 } from 'react-icons/fa';
 
 function Programs() {
@@ -47,7 +47,7 @@ function Programs() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl flex items-center justify-center gap-3 underline decoration-accent underline-offset-8">
-        
+              <FaCompass className="text-accent" size={32} />
               Our Programs
             </h2>
             <p className="text-secondary text-lg flex items-center justify-center gap-2">
@@ -105,47 +105,8 @@ function Programs() {
             })}
           </div>
         </div>
-     
-
-      {/* Core Values Section */}
-      
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-primary text-center mt-8 mb-4 flex items-center justify-center gap-3">
-              
-              Our Commitment
-            </h2>
-            <p className="text-center text-secondary mb-10 max-w-2xl mx-auto">
-              At Decent Humans, we are committed to nurturing every child through these core values.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-soft transition-shadow">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FaBible className="text-accent text-3xl" />
-                </div>
-                <h3 className="font-semibold text-primary text-lg mb-2">Faith First</h3>
-                <p className="text-secondary/70 text-sm">Rooted in scripture and Christ's love</p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-soft transition-shadow">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FaSmile className="text-accent text-3xl" />
-                </div>
-                <h3 className="font-semibold text-primary text-lg mb-2">Whole Child</h3>
-                <p className="text-secondary/70 text-sm">Emotional, mental, spiritual growth</p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-soft transition-shadow">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FaShieldAlt className="text-accent text-3xl" />
-                </div>
-                <h3 className="font-semibold text-primary text-lg mb-2">Safe & Loving</h3>
-                <p className="text-secondary/70 text-sm">Every child deserves protection</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
+
     </>
   );
 }

@@ -19,7 +19,7 @@ function DonateButton({ variant = 'default' }) {
     >
       <FaDonate size={variant === 'small' ? 14 : 16} />
       Donate
-      <FaHeart size={variant === 'small' ? 12 : 14} className="text-red-400" />
+      
     </a>
   );
 }

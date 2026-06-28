@@ -29,7 +29,7 @@ function Header({ scrollToSection, activeSection }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-soft">
+    <header className="sticky top-0 z-50 bg-white shadow-soft py-4">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         {/* Logo */}
         <div 
@@ -98,7 +98,7 @@ function Header({ scrollToSection, activeSection }) {
             >
               <FaDonate size={16} />
               Make a Donation
-              <FaHeart size={14} className="text-red-400" />
+             
             </button>
           </nav>
         </div>
