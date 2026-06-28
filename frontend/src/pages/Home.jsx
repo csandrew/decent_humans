@@ -1,5 +1,5 @@
 // frontend/src/pages/Home.jsx
-import { FaHandsHelping, FaHeart, FaChild, FaChurch, FaSmile, FaSeedling, FaArrowRight, FaUsers, FaStar } from 'react-icons/fa';
+import { FaHandsHelping, FaHeart, FaChild, FaChurch, FaSmile, FaSeedling, FaArrowRight, FaUsers, FaStar, FaCompass } from 'react-icons/fa';
 
 function Home({ scrollToSection }) {
   return (
@@ -50,7 +50,7 @@ function Home({ scrollToSection }) {
         <div className="w-full max-w-5xl mt-12">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {/* Stat 1 */}
-            <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-all hover:scale-105">
+            <div className="text-center p-6 rounded-2xl bg-white/2 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-all hover:scale-105">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <FaUsers className="text-accent" size={20} />
                 <div className="text-3xl md:text-4xl font-bold text-white">200+</div>
@@ -60,19 +60,19 @@ function Home({ scrollToSection }) {
             </div>
 
             {/* Stat 2 */}
-            <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-all hover:scale-105">
+            <div className="text-center p-6 rounded-2xl bg-white/2 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-all hover:scale-105">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <FaStar className="text-yellow-400" size={20} />
-                <div className="text-3xl md:text-4xl font-bold text-white">95%</div>
+                <div className="text-3xl md:text-4xl font-bold text-white">97%</div>
               </div>
               <h3 className="font-semibold text-white">Parent Satisfaction</h3>
               <p className="text-white/70 text-sm">Families seeing positive change</p>
             </div>
 
             {/* Stat 3 */}
-            <div className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-all hover:scale-105">
+            <div className="text-center p-6 rounded-2xl bg-white/2 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-all hover:scale-105">
               <div className="flex items-center justify-center gap-2 mb-1">
-                <FaHeart className="text-accent" size={20} />
+                <FaCompass className="text-accent" size={32} />
                 <div className="text-3xl md:text-4xl font-bold text-white">4</div>
               </div>
               <h3 className="font-semibold text-white">Core Programs</h3>
