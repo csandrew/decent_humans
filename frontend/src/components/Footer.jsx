@@ -12,9 +12,8 @@ function Footer() {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Programs', href: '#programs' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
-    { name: 'Get Involved', href: '#involve' }
+    { name: 'Get Involved', href: '#get-involved' },  // Fixed
+    { name: 'Contact', href: '#contact' }
   ];
 
   const legalLinks = [
@@ -68,7 +67,7 @@ function Footer() {
                 const Icon = item.icon;
                 return (
                   <li key={idx}>
-                    <a 
+                    <a
                       href={item.href}
                       className="flex items-start gap-3 text-white/70 hover:text-accent transition-colors"
                     >
@@ -88,8 +87,8 @@ function Footer() {
               Subscribe to receive updates about our programs and events.
             </p>
             <form className="flex flex-col gap-2">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Your email address"
                 className="px-3 py-2 rounded-md text-primary bg-white/90 focus:outline-none focus:ring-2 focus:ring-accent text-sm"
               />
@@ -143,9 +142,9 @@ function Footer() {
           </div>
         </div>
 
-        {/* Made with love */}
+        {/* Designed by */}
         <div className="text-center mt-6 text-white/40 text-xs">
-          Made with <FaHeart className="inline text-accent" size={10} /> in Nairobi, Kenya
+          NalediTechnologies
         </div>
       </div>
     </footer>

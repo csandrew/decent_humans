@@ -46,7 +46,7 @@ function Home({ scrollToSection }) {
             <FaArrowRight size={14} />
           </button>
           <button
-            onClick={() => scrollToSection && scrollToSection('involve')}
+            onClick={() => scrollToSection && scrollToSection('get-involved')}
             className="inline-flex items-center gap-2 rounded-lg border-2 border-white bg-transparent px-7 py-3 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-primary"
           >
             <FaSeedling size={18} />

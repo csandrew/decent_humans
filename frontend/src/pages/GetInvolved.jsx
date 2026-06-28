@@ -1,5 +1,5 @@
-import { 
-  FaQuoteLeft, FaBookOpen, FaArrowRight, FaNewspaper, FaWhatsapp, 
+import {
+  FaQuoteLeft, FaBookOpen, FaArrowRight, FaNewspaper, FaWhatsapp,
   FaPenFancy, FaStar, FaHeart, FaChild, FaGraduationCap, FaUsers,
   FaHandsHelping, FaChurch, FaDonate, FaMoneyBillWave,
   FaSmile, FaShieldAlt, FaBible
@@ -46,7 +46,7 @@ function GetInvolved() {
   return (
     <section className="bg-background py-16">
       <div className="mx-auto max-w-6xl px-6">
-        
+
         {/* Page Header */}
         <div className="text-center mb-12">
           <div className="flex justify-center gap-3 mb-4">
@@ -68,7 +68,7 @@ function GetInvolved() {
             <FaHandsHelping className="text-accent" size={24} />
             Ways to Get Involved
           </h2>
-          
+
           <div className="grid gap-6 md:grid-cols-3">
             {/* Volunteer Card */}
             <div className="bg-white rounded-xl shadow-soft hover:shadow-hover transition-all p-8 text-center border border-gray-100">
@@ -128,7 +128,7 @@ function GetInvolved() {
             <FaStar className="text-accent" size={24} />
             Real Stories, Real Change
           </h2>
-          
+
           <div className="grid gap-6 md:grid-cols-3">
             {blogConnections.map((item, idx) => {
               const StoryIcon = item.icon;
@@ -139,7 +139,7 @@ function GetInvolved() {
                     <p className="text-secondary/80">"{item.story}"</p>
                   </div>
                   <p className="mt-6 font-semibold text-primary">{item.author}</p>
-                  
+
                   {/* Blog connection divider */}
                   <div className="relative my-6">
                     <div className="absolute inset-0 flex items-center">
@@ -152,7 +152,7 @@ function GetInvolved() {
                       </span>
                     </div>
                   </div>
-                  
+
                   {/* Featured blog post */}
                   <div className="mt-2 block rounded-xl bg-secondary/5 p-4 transition hover:bg-secondary/10">
                     <h4 className="font-semibold text-primary">{item.blogPost.title}</h4>
@@ -179,7 +179,7 @@ function GetInvolved() {
           <p className="mt-3 text-secondary/80">
             Your experience could inspire others and encourage more people to get involved.
           </p>
-          
+
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-center">
             <a
               href="https://wa.me/254700000000?text=I'd%20like%20to%20share%20my%20story"
@@ -189,16 +189,8 @@ function GetInvolved() {
               Share Your Story
               <FaArrowRight size={12} />
             </a>
-            <a
-              href="/blog/submit"
-              className="inline-flex items-center gap-2 rounded-md border-2 border-accent bg-transparent px-6 py-3 text-sm font-semibold text-secondary transition hover:bg-accent hover:text-white"
-            >
-              <FaGraduationCap size={16} />
-              Read More Stories
-              <FaArrowRight size={12} />
-            </a>
           </div>
-          
+
           <p className="mt-6 text-xs text-secondary/40 flex items-center justify-center gap-1">
             <FaStar size={10} />
             Selected stories are featured in our "Changed Lives" series

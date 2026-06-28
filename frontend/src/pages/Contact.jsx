@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaAt, FaGraduationCap, FaRegCommentDots, FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
+import { 
+  FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaAt, 
+  FaGraduationCap, FaRegCommentDots, FaPaperPlane, FaCheckCircle,
+  FaInstagram, FaTwitter, FaFacebookF, FaYoutube
+} from 'react-icons/fa';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -15,6 +19,13 @@ function Contact() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
+  const socialLinks = [
+    { href: 'https://www.instagram.com/csandrew_ke', icon: FaInstagram, label: 'Instagram' },
+    { href: 'https://twitter.com/cs_andrew', icon: FaTwitter, label: 'Twitter' },
+    { href: 'https://www.facebook.com/csandrew.ke', icon: FaFacebookF, label: 'Facebook' },
+    { href: 'https://www.youtube.com/channel/UC9Xo8s5n1Z5j3k2l4m5n6o7', icon: FaYoutube, label: 'YouTube' }
+  ];
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -42,8 +53,8 @@ function Contact() {
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="mb-4 flex items-center justify-center gap-3 text-4xl font-bold text-deep-brown md:text-5xl">
-        
+          <h1 className="mb-4 flex items-center justify-center gap-3 text-4xl font-bold text-primary md:text-5xl">
+            <FaPaperPlane className="text-accent" size={36} />
             Let's Connect
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-secondary/80 sm:text-xl">
@@ -61,13 +72,12 @@ function Contact() {
                 <FaPhone className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-deep-brown mb-1">Call Us</h3>
+                <h3 className="text-lg font-semibold text-primary mb-1">Call Us</h3>
                 <a href="tel:+254724436800" className="text-secondary/70 hover:text-blue-600 transition-colors">
                   +254 724 436800
                 </a>
               </div>
             </div>
-            
 
             {/* Email */}
             <div className="group flex items-start space-x-4">
@@ -75,13 +85,12 @@ function Contact() {
                 <FaEnvelope className="w-6 h-6 text-purple-600" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-deep-brown mb-1">Email</h3>
+                <h3 className="text-lg font-semibold text-primary mb-1">Email</h3>
                 <a href="mailto:tribe@kinetiq-fit.com" className="text-secondary/70 hover:text-purple-600 transition-colors">
                   tribe@kinetiq-fit.com
                 </a>
               </div>
             </div>
-
 
             {/* Location */}
             <div className="group flex items-start space-x-4">
@@ -89,11 +98,33 @@ function Contact() {
                 <FaMapMarkerAlt className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-deep-brown mb-1">Location</h3>
+                <h3 className="text-lg font-semibold text-primary mb-1">Location</h3>
                 <p className="text-secondary/70">
                   View Park Towers, 17TH Floor,<br />
                   Monrovia Street Nairobi, Kenya.
                 </p>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="pt-4">
+              <h3 className="text-lg font-semibold text-primary mb-3">Follow Us</h3>
+              <div className="flex gap-3">
+                {socialLinks.map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      className="text-secondary/50 hover:text-accent hover:bg-accent/10 transition-colors p-3 rounded-full bg-gray-100"
+                      aria-label={item.label}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon size={20} />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -102,7 +133,7 @@ function Contact() {
           <div className="rounded-3xl bg-white p-6 shadow-xl md:p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="fullName" className="block text-sm font-semibold text-deep-brown mb-2">
+                <label htmlFor="fullName" className="block text-sm font-semibold text-primary mb-2">
                   <FaUser className="inline mr-2 text-accent" size={14} />
                   Your name <span className="font-normal text-secondary/60">(optional)</span>
                 </label>
@@ -113,12 +144,12 @@ function Contact() {
                   value={formData.fullName}
                   onChange={handleChange}
                   placeholder="Or leave anonymous"
-                  className="w-full rounded-md border border-brown/20 bg-white/90 px-4 py-3 text-sm text-deep-brown shadow-soft outline-none transition focus:border-gold focus:ring-4 focus:ring-gold/20"
+                  className="w-full rounded-md border border-secondary/20 bg-white/90 px-4 py-3 text-sm text-primary shadow-soft outline-none transition focus:border-accent focus:ring-4 focus:ring-accent/20"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-deep-brown mb-2">
+                <label htmlFor="email" className="block text-sm font-semibold text-primary mb-2">
                   <FaAt className="inline mr-2 text-accent" size={14} />
                   Email address <span className="font-normal text-secondary/60">(optional)</span>
                 </label>
@@ -129,12 +160,12 @@ function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="We'll only use this to follow up"
-                  className="w-full rounded-md border border-brown/20 bg-white/90 px-4 py-3 text-sm text-deep-brown shadow-soft outline-none transition focus:border-gold focus:ring-4 focus:ring-gold/20"
+                  className="w-full rounded-md border border-secondary/20 bg-white/90 px-4 py-3 text-sm text-primary shadow-soft outline-none transition focus:border-accent focus:ring-4 focus:ring-accent/20"
                 />
               </div>
 
               <div>
-                <label htmlFor="programme" className="block text-sm font-semibold text-deep-brown mb-2">
+                <label htmlFor="programme" className="block text-sm font-semibold text-primary mb-2">
                   <FaGraduationCap className="inline mr-2 text-accent" size={14} />
                   Interested Programme
                 </label>
@@ -143,7 +174,7 @@ function Contact() {
                   name="programme"
                   value={formData.programme}
                   onChange={handleChange}
-                  className="w-full rounded-md border border-brown/20 bg-white/90 px-4 py-3 text-sm text-deep-brown shadow-soft outline-none transition focus:border-gold focus:ring-4 focus:ring-gold/20"
+                  className="w-full rounded-md border border-secondary/20 bg-white/90 px-4 py-3 text-sm text-primary shadow-soft outline-none transition focus:border-accent focus:ring-4 focus:ring-accent/20"
                 >
                   <option value="">Select a programme</option>
                   <option value="discover">Discover - Identity & Self-awareness</option>
@@ -156,7 +187,7 @@ function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-deep-brown mb-2">
+                <label htmlFor="message" className="block text-sm font-semibold text-primary mb-2">
                   <FaRegCommentDots className="inline mr-2 text-accent" size={14} />
                   Your message <span className="text-rose-600">*</span>
                 </label>
@@ -168,14 +199,14 @@ function Contact() {
                   required
                   placeholder="Share your prayer request, testimony, question, or movement goals..."
                   rows="4"
-                  className="min-h-[140px] w-full rounded-md border border-brown/20 bg-white/90 px-4 py-3 text-sm text-deep-brown shadow-soft outline-none transition focus:border-gold focus:ring-4 focus:ring-gold/20 resize-none"
+                  className="min-h-[140px] w-full rounded-md border border-secondary/20 bg-white/90 px-4 py-3 text-sm text-primary shadow-soft outline-none transition focus:border-accent focus:ring-4 focus:ring-accent/20 resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-accent px-8 py-3 text-base font-semibold text-deep-brown rounded-md shadow-soft transition hover:bg-[#b8922e] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-accent hover:bg-accent/80 text-white px-8 py-3 text-base font-semibold rounded-md shadow-soft transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === "submitting" ? (
                   <>Sending...</>

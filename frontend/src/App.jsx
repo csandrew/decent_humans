@@ -33,12 +33,13 @@ function App() {
     { id: 'home', Component: HomeSection, props: { scrollToSection } },
     { id: 'about', Component: AboutSection },
     { id: 'programs', Component: ProgramsSection },
-    { id: 'getinvolved', Component: GetInvolvedSection },
+    { id: 'get-involved', Component: GetInvolvedSection },
     { id: 'contact', Component: ContactSection },
   ];
 
   return (
     <div className="flex min-h-screen flex-col">
+
       <Header scrollToSection={scrollToSection} activeSection={activeSection} />
       <main className="flex-grow">
         {sections.map(({ id, Component, props }) => (
