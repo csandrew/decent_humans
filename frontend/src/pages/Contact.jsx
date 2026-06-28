@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { 
-  FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaAt, 
+import {
+  FaPhone, FaEnvelope, FaMapMarkerAlt, FaUser, FaAt,
   FaGraduationCap, FaRegCommentDots, FaPaperPlane, FaCheckCircle,
   FaInstagram, FaTwitter, FaFacebookF, FaYoutube
 } from 'react-icons/fa';
@@ -53,10 +53,7 @@ function Contact() {
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="mb-4 flex items-center justify-center gap-3 text-4xl font-bold text-primary md:text-5xl">
-            <FaPaperPlane className="text-accent" size={36} />
-            Let's Connect
-          </h1>
+          <h1 className="mb-4 flex items-center justify-center gap-3 text-4xl font-bold text-primary md:text-5xl underline decoration-accent underline-offset-8">Let's Connect</h1>
           <p className="mx-auto max-w-2xl text-lg text-secondary/80 sm:text-xl">
             Reach out and we'll help you be part of the movement journey.
             Share your prayer request, testimony, or question.

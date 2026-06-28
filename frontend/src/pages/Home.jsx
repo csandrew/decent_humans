@@ -20,7 +20,7 @@ function Home({ scrollToSection }) {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
-            <FaSmile className="inline mr-2" size={20} />
+            
             Decent Humans helps children grow mentally, spiritually, emotionally, and socially in a healthy Christian environment across Kenya.
           </p>
 
@@ -29,7 +29,7 @@ function Home({ scrollToSection }) {
               onClick={() => scrollToSection && scrollToSection('contact')}
               className="inline-flex items-center gap-2 rounded-lg bg-accent px-7 py-3 text-base font-semibold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-accent/80 hover:shadow-medium"
             >
-              <FaHandsHelping size={18} />
+              
               Join Our Program
               <FaArrowRight size={14} />
             </button>
@@ -37,7 +37,7 @@ function Home({ scrollToSection }) {
               onClick={() => scrollToSection && scrollToSection('get-involved')}
               className="inline-flex items-center gap-2 rounded-lg border-2 border-white bg-transparent px-7 py-3 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-primary"
             >
-              <FaSeedling size={18} />
+              
               Partner With Us
             </button>
           </div>

@@ -5,7 +5,7 @@ function About() {
     <section className="mx-auto max-w-6xl px-6 py-16">
 
       {/* TITLE */}
-      <h1 className="text-3xl flex justify-center items-center gap-3 font-bold tracking-tight text-primary sm:text-4xl">
+      <h1 className="text-3xl flex justify-center items-center gap-3 font-bold tracking-tight text-primary sm:text-4xl underline decoration-accent underline-offset-8">
     
         About Us
       </h1>

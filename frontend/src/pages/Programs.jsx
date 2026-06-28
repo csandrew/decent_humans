@@ -46,8 +46,8 @@ function Programs() {
       <section className="bg-gray-200 py-16 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl flex items-center justify-center gap-3">
-              <FaCompass className="text-accent" size={32} />
+            <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl flex items-center justify-center gap-3 underline decoration-accent underline-offset-8">
+        
               Our Programs
             </h2>
             <p className="text-secondary text-lg flex items-center justify-center gap-2">
@@ -111,8 +111,8 @@ function Programs() {
       
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-primary text-center mb-4 flex items-center justify-center gap-3">
-              <FaShieldAlt className="text-accent" size={28} />
+            <h2 className="text-2xl font-bold text-primary text-center mt-8 mb-4 flex items-center justify-center gap-3">
+              
               Our Commitment
             </h2>
             <p className="text-center text-secondary mb-10 max-w-2xl mx-auto">

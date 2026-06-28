@@ -10,7 +10,7 @@ function Header({ scrollToSection, activeSection }) {
     { id: 'about', label: 'About' },
     { id: 'programs', label: 'Programs' },
     { id: 'get-involved', label: 'Get Involved' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'contact', label: 'Contact Us' },
   ];
 
   const handleNavClick = (sectionId) => {

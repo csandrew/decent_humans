@@ -49,12 +49,8 @@ function GetInvolved() {
 
         {/* Page Header */}
         <div className="text-center mb-12">
-          <div className="flex justify-center gap-3 mb-4">
-            <FaHeart className="text-accent" size={32} />
-            <FaUsers className="text-accent" size={32} />
-            <FaHandsHelping className="text-accent" size={32} />
-          </div>
-          <h1 className="text-4xl font-bold text-primary sm:text-5xl">
+           
+          <h1 className="text-4xl font-bold text-primary sm:text-5xl underline decoration-accent underline-offset-8">
             Get Involved
           </h1>
           <p className="mt-4 max-w-2xl text-secondary mx-auto text-lg">
@@ -65,7 +61,7 @@ function GetInvolved() {
         {/* Section 1: Ways to Get Involved */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-primary text-center mb-8 flex items-center justify-center gap-2">
-            <FaHandsHelping className="text-accent" size={24} />
+           
             Ways to Get Involved
           </h2>
 
@@ -125,7 +121,7 @@ function GetInvolved() {
         {/* Section 2: Stories/Testimonies */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-primary text-center mb-8 flex items-center justify-center gap-2">
-            <FaStar className="text-accent" size={24} />
+           
             Real Stories, Real Change
           </h2>
 
