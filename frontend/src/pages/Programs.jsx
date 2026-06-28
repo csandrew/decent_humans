@@ -1,4 +1,8 @@
-import { FaCompass, FaSeedling, FaUsers, FaCrown, FaWhatsapp, FaArrowRight, FaCheckCircle, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { 
+  FaCompass, FaSeedling, FaUsers, FaCrown, FaWhatsapp, 
+  FaArrowRight, FaCheckCircle, FaCalendarAlt, FaMapMarkerAlt,
+  FaShieldAlt, FaBible, FaSmile
+} from 'react-icons/fa';
 
 function Programs() {
   const programs = [
@@ -38,20 +42,22 @@ function Programs() {
 
   return (
     <>
-      <section className="bg-background py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">
+      {/* Programs Section */}
+      <section className="bg-gray-200 py-16 sm:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl flex items-center justify-center gap-3">
+              <FaCompass className="text-accent" size={32} />
               Our Programs
             </h2>
             <p className="text-secondary text-lg flex items-center justify-center gap-2">
-            
+              <FaCalendarAlt className="text-accent" size={16} />
               Every Saturday | Ages 6-14 | Nairobi
-          
+              <FaMapMarkerAlt className="text-accent ml-2" size={16} />
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {programs.map((program) => {
               const Icon = program.icon;
               const colorMap = {
@@ -63,7 +69,7 @@ function Programs() {
               const colors = colorMap[program.color];
               
               return (
-                <div className={`bg-white rounded-xl shadow-soft hover:shadow-hover transition-all duration-300 overflow-hidden border border-gray-100 ${colors.hover}`}>
+                <div key={program.id} className={`overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-hover ${colors.hover}`}>
                   <div className={`h-2 ${colors.text.replace('text', 'bg')}`}></div>
                   <div className="p-6">
                     <div className={`w-16 h-16 ${colors.bg} rounded-xl mb-4 flex items-center justify-center mx-auto`}>
@@ -72,7 +78,7 @@ function Programs() {
                     <h3 className={`text-xl font-bold text-center mb-3 ${colors.text}`}>
                       {program.title}
                     </h3>
-                    <p className="text-secondary text-center text-sm mb-4">
+                    <p className="mb-4 text-center text-sm text-secondary">
                       {program.description}
                     </p>
                     <div className="bg-gray-50 rounded-lg p-4 mb-4">
@@ -88,7 +94,7 @@ function Programs() {
                     </div>
                     <a
                       href={`https://wa.me/254700000000?text=I'd like to join the ${program.title} program`}
-                      className={`inline-flex items-center justify-center gap-2 w-full ${colors.text} font-medium hover:opacity-80 transition-colors mt-2`}
+                      className={`mt-2 inline-flex w-full items-center justify-center gap-2 font-medium transition-colors hover:opacity-80 ${colors.text}`}
                     >
                       Learn More
                       <FaArrowRight size={12} />
@@ -99,27 +105,44 @@ function Programs() {
             })}
           </div>
         </div>
-      </section>
+     
 
-      {/* CTA SECTION */}
-      <section className="bg-accent py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center bg-white rounded-2xl shadow-medium p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-              Ready to Start the Journey?
-            </h3>
-            <p className="text-secondary mb-6 flex items-center justify-center gap-3">
-              
-              Saturdays, 9am - 12pm | Nairobi CBD
+      {/* Core Values Section */}
+      
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-primary text-center mb-4 flex items-center justify-center gap-3">
+              <FaShieldAlt className="text-accent" size={28} />
+              Our Commitment
+            </h2>
+            <p className="text-center text-secondary mb-10 max-w-2xl mx-auto">
+              At Decent Humans, we are committed to nurturing every child through these core values.
             </p>
-            <a
-              href="https://wa.me/254700000000?text=I'd like to register for the Saturday program"
-              className="inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-whatsapp/90 text-white font-semibold py-3 px-8 rounded-lg transition-all shadow-soft hover:shadow-medium"
-            >
-              <FaWhatsapp size={18} />
-              Enquire via WhatsApp
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-soft transition-shadow">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FaBible className="text-accent text-3xl" />
+                </div>
+                <h3 className="font-semibold text-primary text-lg mb-2">Faith First</h3>
+                <p className="text-secondary/70 text-sm">Rooted in scripture and Christ's love</p>
+              </div>
               
-            </a>
+              <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-soft transition-shadow">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FaSmile className="text-accent text-3xl" />
+                </div>
+                <h3 className="font-semibold text-primary text-lg mb-2">Whole Child</h3>
+                <p className="text-secondary/70 text-sm">Emotional, mental, spiritual growth</p>
+              </div>
+              
+              <div className="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-soft transition-shadow">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FaShieldAlt className="text-accent text-3xl" />
+                </div>
+                <h3 className="font-semibold text-primary text-lg mb-2">Safe & Loving</h3>
+                <p className="text-secondary/70 text-sm">Every child deserves protection</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

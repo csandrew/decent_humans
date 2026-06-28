@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { FaQuoteLeft, FaHeart, FaShieldAlt, FaBible, FaSmile, FaUsers, FaUserTie, FaClipboardList, FaChalkboardTeacher, FaBullseye, FaEye, FaEnvelope } from 'react-icons/fa';
 
 function About() {

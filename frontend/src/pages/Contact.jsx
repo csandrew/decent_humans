@@ -38,26 +38,26 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gray-200 px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-deep-brown mb-4 flex items-center justify-center gap-3">
+        <div className="mb-12 text-center">
+          <h1 className="mb-4 flex items-center justify-center gap-3 text-4xl font-bold text-deep-brown md:text-5xl">
         
             Let's Connect
           </h1>
-          <p className="text-xl text-secondary/80 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-lg text-secondary/80 sm:text-xl">
             Reach out and we'll help you be part of the movement journey.
             Share your prayer request, testimony, or question.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Contact Information */}
           <div className="space-y-6">
             {/* Call */}
-            <div className="flex items-start space-x-4 group">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+            <div className="group flex items-start space-x-4">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-blue-100 transition-colors group-hover:bg-blue-200">
                 <FaPhone className="w-6 h-6 text-blue-600" />
               </div>
               <div>
@@ -70,8 +70,8 @@ function Contact() {
             
 
             {/* Email */}
-            <div className="flex items-start space-x-4 group">
-              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+            <div className="group flex items-start space-x-4">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-purple-100 transition-colors group-hover:bg-purple-200">
                 <FaEnvelope className="w-6 h-6 text-purple-600" />
               </div>
               <div>
@@ -84,8 +84,8 @@ function Contact() {
 
 
             {/* Location */}
-            <div className="flex items-start space-x-4 group">
-              <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center group-hover:bg-green-200 transition-colors">
+            <div className="group flex items-start space-x-4">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-green-100 transition-colors group-hover:bg-green-200">
                 <FaMapMarkerAlt className="w-6 h-6 text-green-600" />
               </div>
               <div>
@@ -99,7 +99,7 @@ function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+          <div className="rounded-3xl bg-white p-6 shadow-xl md:p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="fullName" className="block text-sm font-semibold text-deep-brown mb-2">

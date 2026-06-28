@@ -1,5 +1,4 @@
 import { FaInstagram, FaTwitter, FaFacebookF, FaYoutube, FaHeart, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 function Footer() {
   const socialLinks = [
@@ -10,19 +9,19 @@ function Footer() {
   ];
 
   const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Programs', path: '/programs' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Get Involved', path: '/involve' }
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Programs', href: '#programs' },
+    { name: 'Blog', href: '#blog' },
+    { name: 'Contact', href: '#contact' },
+    { name: 'Get Involved', href: '#involve' }
   ];
 
   const legalLinks = [
-    { name: 'Terms & Conditions', path: '/terms' },
-    { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Cookie Policy', path: '/cookies' },
-    { name: 'Child Protection Policy', path: '/child-protection' }
+    { name: 'Terms & Conditions', href: '#contact' },
+    { name: 'Privacy Policy', href: '#contact' },
+    { name: 'Cookie Policy', href: '#contact' },
+    { name: 'Child Protection Policy', href: '#contact' }
   ];
 
   const contactInfo = [
@@ -50,12 +49,12 @@ function Footer() {
             <ul className="space-y-2 text-sm">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    to={link.path} 
+                  <a
+                    href={link.href}
                     className="text-white/70 hover:text-accent transition-colors"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -114,13 +113,13 @@ function Footer() {
           {/* Legal Links */}
           <div className="flex flex-wrap justify-center gap-4">
             {legalLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
-                to={link.path}
+                href={link.href}
                 className="text-white/60 hover:text-accent transition-colors text-xs"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </div>
 
